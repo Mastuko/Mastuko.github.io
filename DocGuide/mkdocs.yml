@@ -1,0 +1,77 @@
+# 站点名称
+site_name: 'Matsuko's Blog'
+# 仓库链接
+repo_url: https://github.com/ZJDoc/DocGuide.git
+# 作者
+site_author: 'matsuko'
+# 版权信息
+copyright: '2021, matsuko'
+# 源文件目录
+docs_dir: 'docs'
+# 生成静态文件目录
+site_dir: 'site'
+# 额外信息
+extra:
+    # 版本号
+    version: 0.1.0
+# 主题
+theme: 
+    # name: 'readthedocs'
+    # name: 'mkdocs'
+    name: 'material'
+# markdown扩展
+markdown_extensions:
+  # 参考[MathJax](https://squidfunk.github.io/mkdocs-material/reference/mathjax/)，支持数学公式渲染
+  - pymdownx.arithmatex:
+      generic: true
+    # 参考[Icons + Emojis](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/)，执行Markdown Emoji
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+# mathjax
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# 导航
+nav:
+    - Home: index.md
+    - 标记语言:
+      - Markdown:
+        - 引言: markdown/index.md
+        - 页内跳转: markdown/页内跳转.md
+        - 表格: markdown/表格.md
+        - 数学公式: markdown/数学公式.md
+        - 截图公式转换: markdown/截图公式转换.md
+        - 代码块设置: markdown/代码块设置.md
+        - 标签页实现: markdown/标签页实现.md
+        - 自定义Markdown编辑器: markdown/自定义Markdown编辑器.md
+        - '[VSCode]Markdown': markdown/vscode-markdown.md
+        - '[CSDN]Markdown': markdown/csdn-markdown.md
+        - '[CSDN]取出水印': markdown/csdn-去除水印.md
+      - reStructuredText:
+        - 常用语法: rst/常用语法.md
+    - 制作工具:
+      - Mkdocs:
+        - 引言: mkdocs/index.md
+        - 快速入门: mkdocs/get-started.md
+        - 配置文件解析: mkdocs/配置文件解析.md
+        - '[插件]MathJax': mkdocs/extension-mathjax.md
+        - '[插件]Emoji': mkdocs/extension-emoji.md
+      - Sphinx:
+        - 引言: sphinx/index.md
+        - 快速入门: sphinx/get-started.md
+        - 主题: sphinx/theme.md
+        - '[reStructuredText]目录树': sphinx/rst-toc.md
+        - Markdown配置: sphinx/markdown.md
+        - '[Markdown]MathJax支持': sphinx/markdown-mathjax.md
+      - Pandoc:
+        - '[Pandoc]文档转换工具': pandoc/pandoc-文档转换工具.md
+    - 部署平台:
+      - ReadTheDocs:
+        - 介绍: readthedocs/index.md
+        - 发布: readthedocs/发布.md
+        - 徽章: readthedocs/badge.md
+        - ERROR: readthedocs/error.md 
